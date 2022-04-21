@@ -1,6 +1,6 @@
 # Net_Java_AQA_9_2
 
-###1. Подготовительная часть. 
+### 1. Подготовительная часть. 
 - создаем проект с Gradle в Idea и добавляем файл docker-compose.yml (  [отсюда](https://github.com/reportportal/reportportal/blob/master/docker-compose.yml))
 - т.к. ReportPortal разворачивается под Win то вносим коррективы в docker-compose.yml:
  ```
@@ -18,7 +18,7 @@ volumes:
 ```
 - через VPN запускаем docker-compose.yml и разворачиваем ReportPortal
 
-###3. Интеграция Junit5+Gradle используя [это](https://github.com/reportportal/agent-java-junit5)
+### 2. Интеграция Junit5+Gradle используя [это](https://github.com/reportportal/agent-java-junit5)
 - добавляем в build.gradle
 ```
 repositories {
@@ -49,7 +49,7 @@ public class CallBackTests {
 ```
 - добавляем log4j2.xml в папку src/test/resources 
 
-###3. Проверка портала
+### 3. Проверка портала
 - проверяем доступность http://localhost:8080/
 - Суперпользователем создаем новый проект и добавляем в него обычного тестового пользователя
 - в src/test/resources создаем файл reportportal.properties , куда копируем информацию из профиля пользователя на портале 
